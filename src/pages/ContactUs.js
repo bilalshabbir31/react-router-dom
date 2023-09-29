@@ -1,9 +1,11 @@
-import React from 'react'
+import { useContext } from "react";
+import { AppContext } from "../App";
 
 const ContactUs = () => {
-  return (
-    <div>ContactUs</div>
-  )
-}
+  
+  const { username } = useContext(AppContext);
 
-export default ContactUs
+  return <div>ContactUs {username}</div>;
+};
+
+export default ContactUs;
